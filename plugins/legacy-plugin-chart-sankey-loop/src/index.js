@@ -19,6 +19,7 @@
 import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
 import transformProps from './transformProps';
 import thumbnail from './images/thumbnail.png';
+import controlPanel from './controlPanel';
 
 const metadata = new ChartMetadata({
   credits: ['https://github.com/ricklupton/d3-sankey-diagram'],
@@ -34,6 +35,7 @@ export default class SankeyChartPlugin extends ChartPlugin {
       loadChart: () => import('./ReactSankeyLoop.js'),
       metadata,
       transformProps,
+      controlPanel,
     });
   }
 }
